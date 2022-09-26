@@ -8,12 +8,12 @@ import {
 	ChatWrapper,
 	FooterWrapper,
 	QuickReplyWrapper
-} from "../modules/zeza/zeza.style";
+} from "../modules/vicky/vicky.style";
 import useWindowDimensions from "../utils/hooks/use-window-dimension.hook";
-import { ZezaNeutralSvg } from "../assets/svg/zeza-neutral-svg";
+import { VickyNeutralSvg } from "../assets/svg/vicky-neutral-svg";
 import { VSeparator } from "../components/atm.separator/v-separator";
 
-const ZezaPage: React.FC = () => {
+const VickyPage: React.FC = () => {
 	const isBrowser = typeof window !== "undefined";
 
 	if (!isBrowser) return <></>;
@@ -32,7 +32,7 @@ const ZezaPage: React.FC = () => {
 										Teste
 									</BubbleWrapper>
 									<VSeparator />
-									<ZezaNeutralSvg height={0.3 * height} width={0.3 * width} />
+									<VickyNeutralSvg height={0.3 * height} width={0.3 * width} />
 									<FooterWrapper>
 										<QuickReplyWrapper>Ok</QuickReplyWrapper>
 										<QuickReplyWrapper>Ok</QuickReplyWrapper>
@@ -47,4 +47,4 @@ const ZezaPage: React.FC = () => {
 	);
 };
 
-export default ZezaPage;
+export default VickyPage;

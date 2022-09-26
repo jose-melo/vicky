@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export function ZezaNeutralSvg(props: any) {
+export function VickyNeutralSvg(props: any) {
 	return (
 		<svg
 			height={props.height}

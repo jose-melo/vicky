@@ -5,6 +5,11 @@ interface IChatWrapper {
 	width?: number;
 }
 
+export const TextWrapper = styled.div`
+	font-family: monospace;
+	color: white;
+`
+
 export const ChatWrapper = styled.div<IChatWrapper>`
 	background-color: #c9c9c9;
 	height: ${props => (props.height ? props.height + "px" : "auto")};
@@ -15,7 +20,8 @@ export const ChatWrapper = styled.div<IChatWrapper>`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	max-width: 450px;
+	max-width: 40%;
+	border-radius: 50px;
 `;
 
 interface IBubbleWrapper {
@@ -27,15 +33,13 @@ export const BubbleWrapper = styled.div<IBubbleWrapper>`
 	background-color: #ae87dd;
 	justify-content: center;
 	align-items: center;
-	color: white;
-	max-width: 200px;
+	max-width: 80%;
 	overflow-wrap: break-word;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	padding-left: 5px;
 	padding-right: 5px;
 	margin: auto;
-	font-family: monospace;
 `;
 
 export const QuickReplyWrapper = styled.div`
@@ -43,7 +47,6 @@ export const QuickReplyWrapper = styled.div`
 	background-color: #70c056;
 	justify-content: center;
 	align-items: center;
-	color: white;
 	min-width: 100px;
 	overflow-wrap: break-word;
 	padding-top: 10px;
@@ -51,7 +54,6 @@ export const QuickReplyWrapper = styled.div`
 	padding-left: 5px;
 	padding-right: 5px;
 	margin: auto;
-	font-family: Montserrat;
 	cursor: pointer;
 `;
 

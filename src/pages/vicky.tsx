@@ -7,7 +7,8 @@ import {
 	BubbleWrapper,
 	ChatWrapper,
 	FooterWrapper,
-	QuickReplyWrapper
+	QuickReplyWrapper,
+	TextWrapper
 } from "../modules/vicky/vicky.style";
 import useWindowDimensions from "../utils/hooks/use-window-dimension.hook";
 import { VickyNeutralSvg } from "../assets/svg/vicky-neutral-svg";
@@ -26,19 +27,21 @@ const VickyPage: React.FC = () => {
 				<Grid>
 					<Row>
 						<Col xs={4} lg={2} md={2} xl={2} xxl={2}>
-							<ChatWrapper height={Math.floor(0.8 * height)}>
-								<Col xs={4} lg={4} md={4}>
-									<BubbleWrapper maxWidth={Math.floor(0.4 * width)}>
-										Teste
-									</BubbleWrapper>
-									<VSeparator />
-									<VickyNeutralSvg height={0.3 * height} width={0.3 * width} />
-									<FooterWrapper>
-										<QuickReplyWrapper>Ok</QuickReplyWrapper>
-										<QuickReplyWrapper>Ok</QuickReplyWrapper>
-									</FooterWrapper>
-								</Col>
-							</ChatWrapper>
+							<TextWrapper>
+								<ChatWrapper height={Math.floor(0.8 * height)}>
+									<Col xs={4} lg={4} md={4}>
+										<BubbleWrapper maxWidth={Math.floor(0.4 * width)}>
+											Teste
+										</BubbleWrapper>
+										<VSeparator />
+										<VickyNeutralSvg height={0.3 * height} width={0.3 * width} />
+										<FooterWrapper>
+											<QuickReplyWrapper>Ok</QuickReplyWrapper>
+											<QuickReplyWrapper>Ok</QuickReplyWrapper>
+										</FooterWrapper>
+									</Col>
+								</ChatWrapper>
+							</TextWrapper>
 						</Col>
 					</Row>
 				</Grid>

@@ -20,6 +20,8 @@ const VickyPage: React.FC = () => {
 	if (!isBrowser) return <></>;
 
 	const { width, height } = useWindowDimensions();
+	const svgSizePercentage = width >= 950 ? 0.3 : 0.4;
+	const bubbleBorder = width >= 950 ? 0.1 : 0.05;
 
 	return (
 		<Layout>
@@ -30,11 +32,11 @@ const VickyPage: React.FC = () => {
 							<TextWrapper>
 								<ChatWrapper height={Math.floor(0.8 * height)}>
 									<Col xs={4} lg={4} md={4}>
-										<BubbleWrapper maxWidth={Math.floor(0.4 * width)}>
-											Teste
+										<BubbleWrapper borderRadius={Math.floor(bubbleBorder*height)} minHeight={Math.floor(0.03*height)} maxWidth={Math.floor(0.4 * width)}>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et odio sed orci ullamcorper porta nec et urna. Integer a est porta, molestie turpis vitae, tristique nunc. Etiam porta, ante vel efficitur vehicula. 
 										</BubbleWrapper>
 										<VSeparator />
-										<VickyNeutralSvg height={0.3 * height} width={0.3 * width} />
+										<VickyNeutralSvg height={svgSizePercentage * width} width={svgSizePercentage * width} />
 										<FooterWrapper>
 											<QuickReplyWrapper>Ok</QuickReplyWrapper>
 											<QuickReplyWrapper>Ok</QuickReplyWrapper>
